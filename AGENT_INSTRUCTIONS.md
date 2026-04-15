@@ -15,17 +15,17 @@ Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung
 Klausuren werden immer nach diesem Schema abgelegt:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/klausur.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/loesung.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/klausur-{nr}.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/loesung-{nr}.md
 ```
 
-`{nr}` ist eine **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …), sodass es pro Fach, Bundesland und Klassenstufe mehrere Klausuren geben kann.
+`{nr}` ist eine **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …), die Teil des Dateinamens ist. So kann es pro Fach, Bundesland und Klassenstufe mehrere Klausuren geben.
 
 Beispiele:
-- `klausuren/stochastik/bayern-12-klasse/01/`
-- `klausuren/stochastik/bayern-12-klasse/02/`
-- `klausuren/analysis/nrw-13-klasse/01/`
-- `klausuren/geometrie/berlin-11-klasse/01/`
+- `klausuren/stochastik/bayern-12-klasse/klausur-01.md`
+- `klausuren/stochastik/bayern-12-klasse/klausur-02.md`
+- `klausuren/analysis/nrw-13-klasse/klausur-01.md`
+- `klausuren/geometrie/berlin-11-klasse/klausur-01.md`
 
 Beim Anlegen einer neuen Klausur: Prüfe, welche Nummern bereits existieren, und verwende die nächste freie Nummer.
 
@@ -35,7 +35,7 @@ Beim Anlegen einer neuen Klausur: Prüfe, welche Nummern bereits existieren, und
 
 ### 1. Format
 
-- Aufgaben und Lösung **immer** als separate Markdown-Dateien: `klausur.md` und `loesung.md`
+- Aufgaben und Lösung **immer** als separate Markdown-Dateien: `klausur-{nr}.md` und `loesung-{nr}.md`
 - Jede Datei beginnt mit einem aussagekräftigen Titel (z. B. `# Stochastik-Klausur – Bayern 12. Klasse`)
 - Metadaten am Anfang: Bearbeitungszeit, Hilfsmittel, Gesamtpunktzahl
 

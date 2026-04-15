@@ -21,12 +21,10 @@ examination-training/
 └── klausuren/
     └── {fach}/
         └── {bundesland}-{klassenstufe}/
-            ├── 01/
-            │   ├── klausur.md          ← Aufgabenblatt
-            │   └── loesung.md         ← Musterlösung
-            ├── 02/
-            │   ├── klausur.md
-            │   └── loesung.md
+            ├── klausur-01.md           ← Aufgabenblatt Nr. 1
+            ├── loesung-01.md           ← Musterlösung Nr. 1
+            ├── klausur-02.md           ← Aufgabenblatt Nr. 2
+            ├── loesung-02.md           ← Musterlösung Nr. 2
             └── ...
 ```
 
@@ -58,8 +56,8 @@ examination-training/
 Neue Klausuren können über einen Pull Request beigetragen werden. Bitte halte dich dabei an die bestehende Ordnerstruktur:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/klausur.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/loesung.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/klausur-{nr}.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/loesung-{nr}.md
 ```
 
 Weitere Hinweise zur Erstellung korrekter Aufgaben für KI-Agenten findest du in [`AGENT_INSTRUCTIONS.md`](AGENT_INSTRUCTIONS.md).
