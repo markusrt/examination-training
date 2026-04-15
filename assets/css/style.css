@@ -208,6 +208,57 @@ pre code {
   border: 1.5px solid var(--color-primary);
 }
 
+/* ===== Filter bar (index page) ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.filter-bar label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  gap: 0.25rem;
+}
+
+.filter-bar select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.filter-bar select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.filter-reset {
+  align-self: flex-end;
+  font-size: 0.8rem !important;
+  padding: 0.4rem 0.8rem !important;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--color-muted);
+  padding: 2rem 0;
+  font-style: italic;
+}
+
 /* ===== Exam card grid (index page) ===== */
 .exam-grid {
   display: grid;
