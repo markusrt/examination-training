@@ -24,12 +24,12 @@ typ: loesung
 
 #### a) Vierfeldertafel [2 BE]
 
-Gegeben: $n = 30$, $|S| = 18$, $|M| = 12$, $|S \cap M| = 6$
+Gegeben: $n = 30$, $\lvert S\rvert = 18$, $\lvert M\rvert = 12$, $\lvert S \cap M\rvert = 6$
 
 Daraus folgt:
-- $|S \cap \overline{M}| = 18 - 6 = 12$
-- $|\overline{S} \cap M| = 12 - 6 = 6$
-- $|\overline{S} \cap \overline{M}| = 30 - 18 - 12 + 6 = 6$
+- $\lvert S \cap \overline{M}\rvert = 18 - 6 = 12$
+- $\lvert\overline{S} \cap M\rvert = 12 - 6 = 6$
+- $\lvert\overline{S} \cap \overline{M}\rvert = 30 - 18 - 12 + 6 = 6$
 
 |                     | $M$ | $\overline{M}$ | $\Sigma$ |
 |---------------------|-----|----------------|----------|
