@@ -1,6 +1,6 @@
 name: "📝 Neue Prüfung erstellen"
 description: "Fordere eine neue Übungsprüfung an (Klausur, Schulaufgabe, Stegreifaufgabe, …)"
-title: "[Prüfung] {Fach} – {Schulform} {Klassenstufe} ({Bundesland})"
+title: "[Prüfung] ..."
 labels: ["neue-pruefung"]
 body:
   - type: dropdown
@@ -26,21 +26,46 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: bundesland
     attributes:
       label: Bundesland
-      description: "Z. B. Bayern, NRW, Baden-Württemberg"
-      placeholder: "Bayern"
+      description: "In welchem Bundesland soll die Prüfung eingesetzt werden?"
+      options:
+        - Baden-Württemberg
+        - Bayern
+        - Berlin
+        - Brandenburg
+        - Bremen
+        - Hamburg
+        - Hessen
+        - Mecklenburg-Vorpommern
+        - Niedersachsen
+        - Nordrhein-Westfalen
+        - Rheinland-Pfalz
+        - Saarland
+        - Sachsen
+        - Sachsen-Anhalt
+        - Schleswig-Holstein
+        - Thüringen
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: klassenstufe
     attributes:
       label: Klassenstufe
-      description: "Z. B. 12. Klasse, 13. Klasse"
-      placeholder: "12. Klasse"
+      description: "Für welche Klassenstufe soll die Prüfung erstellt werden?"
+      options:
+        - 5. Klasse
+        - 6. Klasse
+        - 7. Klasse
+        - 8. Klasse
+        - 9. Klasse
+        - 10. Klasse
+        - 11. Klasse
+        - 12. Klasse
+        - 13. Klasse
     validations:
       required: true
 
