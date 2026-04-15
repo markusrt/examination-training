@@ -11,9 +11,54 @@ Willkommen bei **Examination Training** – einer Sammlung fachlich geprüfter �
 
 ## Verfügbare Prüfungen
 
-<div class="exam-grid">
-
 {% assign exams = site.pages | where: "typ", "aufgabe" | sort: "fach" %}
+
+<div class="filter-bar no-print" id="filter-bar">
+  <label>
+    🏫 Schulform
+    <select id="filter-schulform" onchange="applyFilters()">
+      <option value="">Alle</option>
+      {% assign schulformen = exams | map: "schulform" | uniq | sort %}
+      {% for s in schulformen %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>
+    📘 Fach
+    <select id="filter-fach" onchange="applyFilters()">
+      <option value="">Alle</option>
+      {% assign faecher = exams | map: "fach" | uniq | sort %}
+      {% for f in faecher %}<option value="{{ f }}">{{ f }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>
+    📍 Bundesland
+    <select id="filter-bundesland" onchange="applyFilters()">
+      <option value="">Alle</option>
+      {% assign bundeslaender = exams | map: "bundesland" | uniq | sort %}
+      {% for b in bundeslaender %}<option value="{{ b }}">{{ b }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>
+    🎓 Klassenstufe
+    <select id="filter-klassenstufe" onchange="applyFilters()">
+      <option value="">Alle</option>
+      {% assign klassenstufen = exams | map: "klassenstufe" | uniq | sort %}
+      {% for k in klassenstufen %}<option value="{{ k }}">{{ k }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>
+    📝 Prüfungstyp
+    <select id="filter-pruefungstyp" onchange="applyFilters()">
+      <option value="">Alle</option>
+      {% assign pruefungstypen = exams | map: "pruefungstyp" | uniq | sort %}
+      {% for p in pruefungstypen %}<option value="{{ p }}">{{ p }}</option>{% endfor %}
+    </select>
+  </label>
+  <button class="btn btn-outline filter-reset" onclick="resetFilters()">✕ Filter zurücksetzen</button>
+</div>
+
+<div class="exam-grid" id="exam-grid">
+
 {% for exam in exams %}
   {% assign pruefungstyp_lower = exam.pruefungstyp | downcase %}
   {% assign exam_stem = pruefungstyp_lower | append: '-' | append: exam.nr %}
@@ -21,7 +66,12 @@ Willkommen bei **Examination Training** – einer Sammlung fachlich geprüfter �
   {% assign loesung_url = exam.url | replace: exam_stem, loesung_stem %}
   {% assign klausur_pdf = exam.url | replace: '.html', '.pdf' %}
   {% assign loesung_pdf = loesung_url | replace: '.html', '.pdf' %}
-  <div class="exam-card">
+  <div class="exam-card"
+       data-schulform="{{ exam.schulform }}"
+       data-fach="{{ exam.fach }}"
+       data-bundesland="{{ exam.bundesland }}"
+       data-klassenstufe="{{ exam.klassenstufe }}"
+       data-pruefungstyp="{{ exam.pruefungstyp }}">
     <h3>{{ exam.fach }} – {{ exam.pruefungstyp }} Nr. {{ exam.nr }}</h3>
     <p>
       🏫 {{ exam.schulform }} · 📍 {{ exam.bundesland }} · 🎓 {{ exam.klassenstufe }}<br>
@@ -39,9 +89,48 @@ Willkommen bei **Examination Training** – einer Sammlung fachlich geprüfter �
 
 </div>
 
+<p class="no-results" id="no-results" style="display:none;">
+  Keine Prüfungen gefunden, die den gewählten Filtern entsprechen.
+</p>
+
 {% if exams.size == 0 %}
 _Noch keine Prüfungen vorhanden._
 {% endif %}
+
+<script>
+function applyFilters() {
+  var filters = {
+    schulform: document.getElementById('filter-schulform').value,
+    fach: document.getElementById('filter-fach').value,
+    bundesland: document.getElementById('filter-bundesland').value,
+    klassenstufe: document.getElementById('filter-klassenstufe').value,
+    pruefungstyp: document.getElementById('filter-pruefungstyp').value
+  };
+  var cards = document.querySelectorAll('#exam-grid .exam-card');
+  var visibleCount = 0;
+  cards.forEach(function(card) {
+    var show = true;
+    for (var key in filters) {
+      if (filters[key] && card.getAttribute('data-' + key) !== filters[key]) {
+        show = false;
+        break;
+      }
+    }
+    card.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+  document.getElementById('no-results').style.display = visibleCount === 0 ? '' : 'none';
+}
+
+function resetFilters() {
+  document.getElementById('filter-schulform').value = '';
+  document.getElementById('filter-fach').value = '';
+  document.getElementById('filter-bundesland').value = '';
+  document.getElementById('filter-klassenstufe').value = '';
+  document.getElementById('filter-pruefungstyp').value = '';
+  applyFilters();
+}
+</script>
 
 ---
 
