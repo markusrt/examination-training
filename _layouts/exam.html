@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% if page.fach and page.bundesland and page.klassenstufe %}
+<div class="exam-meta">
+  <span class="badge">📘 {{ page.fach }}</span>
+  <span class="badge">📍 {{ page.bundesland }}</span>
+  <span class="badge">🎓 {{ page.klassenstufe }}</span>
+  {% if page.nr %}<span class="badge">#{{ page.nr }}</span>{% endif %}
+</div>
+{% endif %}
+
+<div class="exam-actions no-print">
+  {% if page.typ == 'klausur' %}
+    {% assign loesung_url = page.url | replace: 'klausur-', 'loesung-' %}
+    <a class="btn btn-outline" href="{{ loesung_url | relative_url }}">📝 Musterlösung ansehen</a>
+  {% elsif page.typ == 'loesung' %}
+    {% assign klausur_url = page.url | replace: 'loesung-', 'klausur-' %}
+    <a class="btn btn-outline" href="{{ klausur_url | relative_url }}">📋 Klausur ansehen</a>
+  {% endif %}
+
+  {% assign pdf_url = page.url | replace: '.html', '.pdf' %}
+  <a class="btn btn-primary" href="{{ pdf_url | relative_url }}">⬇ Als PDF herunterladen</a>
+
+  <button class="btn btn-outline" onclick="window.print()">🖨️ Drucken</button>
+</div>
+
+{{ content }}
+
+<div class="exam-actions no-print" style="margin-top:3rem">
+  <a class="btn btn-outline" href="{{ '/' | relative_url }}">← Zurück zur Übersicht</a>
+</div>

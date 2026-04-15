@@ -1,3 +1,13 @@
+---
+layout: exam
+title: "Musterlösung: Stochastik-Klausur 01 – Bayern 12. Klasse"
+fach: Stochastik
+bundesland: Bayern
+klassenstufe: "12. Klasse"
+nr: "01"
+typ: loesung
+---
+
 # Musterlösung: Stochastik-Klausur – Bayern 12. Klasse
 
 > Alle Wahrscheinlichkeiten sind auf vier Dezimalstellen gerundet, Prozentwerte auf zwei Dezimalstellen.

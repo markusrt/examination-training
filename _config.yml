@@ -1,0 +1,29 @@
+title: "📚 Examination Training"
+description: "Abitur-Übungsklausuren zur Prüfungsvorbereitung"
+baseurl: "/examination-training"
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null
+
+exclude:
+  - AGENT_INSTRUCTIONS.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+  - .github/scripts
+
+defaults:
+  - scope:
+      path: "klausuren"
+    values:
+      layout: exam
+  - scope:
+      path: ""
+    values:
+      layout: default

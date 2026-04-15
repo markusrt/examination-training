@@ -67,3 +67,15 @@ Weitere Hinweise zur Erstellung korrekter Aufgaben für KI-Agenten findest du in
 ## 📝 Lizenz
 
 Dieses Repository dient ausschließlich Bildungszwecken.
+
+---
+
+## 🌐 GitHub Pages
+
+Die Klausuren sind auch als Website mit PDF-Download verfügbar:
+**[https://markusrt.github.io/examination-training/](https://markusrt.github.io/examination-training/)**
+
+Die Seite wird automatisch über GitHub Actions gebaut und enthält:
+- Navigationsseite mit Übersicht aller verfügbaren Klausuren
+- Aufgaben und Lösungen mit korrekt gerenderten LaTeX-Formeln und Mermaid-Diagrammen
+- Druckfertige PDF-Downloads für jede Klausur und Lösung

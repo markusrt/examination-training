@@ -1,3 +1,15 @@
+---
+layout: exam
+title: "Stochastik-Klausur 01 – Bayern 12. Klasse"
+fach: Stochastik
+bundesland: Bayern
+klassenstufe: "12. Klasse"
+nr: "01"
+typ: klausur
+bearbeitungszeit: "90 Minuten"
+gesamtpunktzahl: "50 BE"
+---
+
 # Stochastik-Klausur – Bayern 12. Klasse
 
 **Bearbeitungszeit:** 90 Minuten  
