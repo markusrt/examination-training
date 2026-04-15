@@ -6,7 +6,7 @@ Dieses Dokument enthält verbindliche Anweisungen für KI-Agenten (z. B. GitHub 
 
 ## 🎯 Ziel
 
-Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung – abgestimmt auf Schulform, Fach, Bundesland und Klassenstufe, die im Prompt angegeben werden. Qualität und mathematische Korrektheit haben absoluten Vorrang vor Quantität.
+Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung – abgestimmt auf Schulform, Fach, Bundesland und Klassenstufe, die im Prompt angegeben werden. Qualität und fachliche Korrektheit haben absoluten Vorrang vor Quantität.
 
 ---
 
@@ -20,7 +20,7 @@ Prüfungen werden immer nach diesem Schema abgelegt:
 ```
 
 - `{schulform}`: z. B. `gymnasium`, `realschule`, `fos`
-- `{fach}`: z. B. `stochastik`, `analysis`, `geometrie`
+- `{fach}`: z. B. `stochastik`, `analysis`, `geometrie`, `deutsch`
 - `{bundesland}-{klassenstufe}`: z. B. `bayern-12-klasse`, `nrw-13-klasse`
 - `{typ}`: Art der Prüfung – z. B. `klausur`, `schulaufgabe`, `kurzarbeit`, `stegreifaufgabe`
 - `{nr}`: **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …) pro Typ
@@ -35,6 +35,8 @@ Beispiele:
 - `gymnasium/analysis/nrw-13-klasse/loesung-schulaufgabe-01.md`
 - `gymnasium/stochastik/bayern-12-klasse/stegreifaufgabe-01.md`
 - `gymnasium/stochastik/bayern-12-klasse/loesung-stegreifaufgabe-01.md`
+- `gymnasium/deutsch/bayern-12-klasse/klausur-01.md`
+- `gymnasium/deutsch/bayern-12-klasse/loesung-klausur-01.md`
 
 Beim Anlegen einer neuen Prüfung: Prüfe, welche Nummern pro Typ bereits existieren, und verwende die nächste freie Nummer.
 
@@ -50,12 +52,14 @@ Alle Prüfungen sollen so geschrieben sein, wie sie **eine erfahrene Lehrkraft d
   - „Lies dir die Aufgaben erst in Ruhe durch, bevor du anfängst."
   - „Achte auf vollständige Lösungswege – Ergebnisse ohne Rechenweg werden nicht gewertet."
   - „Tipp: Skizziere dir ein Baumdiagramm, bevor du rechnest."
+  - „Belegt eure Aussagen immer mit Textstellen (Zeilenangaben!)."
+  - „Achtet auf einen klaren Aufbau und sprachliche Richtigkeit."
 - **Sachkontexte** sollen lebensnah und altersgerecht sein – Bezug zur Lebenswelt der Schülerinnen und Schüler (Schulfest, Sport, Social Media, Alltag, etc.)
 - **Schwierigkeitsaufbau** innerhalb einer Aufgabe: von leicht nach schwer, sodass auch schwächere Schülerinnen und Schüler die ersten Teilaufgaben lösen können
 - **Formulierungen** sollen klar, freundlich und motivierend sein – so wie Lehrkräfte, denen ihre Schülerinnen und Schüler am Herzen liegen
 - Bei Klausuren/Schulaufgaben: Einen kurzen **Hinweis-Block** am Anfang mit praktischen Tipps (Zeiteinteilung, Rechenweg aufschreiben, etc.)
 
-Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollständige Rechenwege und nachvollziehbare Erklärungen enthalten.
+Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollständige Lösungswege (Rechenwege, Analysen, Argumentationen) und nachvollziehbare Erklärungen enthalten.
 
 ---
 
@@ -64,13 +68,13 @@ Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollstän
 ### 1. Format
 
 - Aufgaben und Lösung **immer** als separate Markdown-Dateien: `{typ}-{nr}.md` und `loesung-{typ}-{nr}.md`
-- Jede Datei beginnt mit einem aussagekräftigen Titel (z. B. `# Stochastik-Klausur – Bayern 12. Klasse`)
+- Jede Datei beginnt mit einem aussagekräftigen Titel (z. B. `# Stochastik-Klausur – Bayern 12. Klasse` oder `# Deutsch-Klausur – Bayern 12. Klasse`)
 - Metadaten am Anfang: Bearbeitungszeit, Hilfsmittel, Gesamtpunktzahl
 - YAML Front Matter mit: `schulform`, `fach`, `bundesland`, `klassenstufe`, `nr`, `pruefungstyp`, `typ` (aufgabe/loesung)
 
-### 2. Mathematische Korrektheit – KRITISCH
+### 2. Mathematische Korrektheit – KRITISCH (für MINT-Fächer)
 
-> **Dies ist die wichtigste Anforderung. Überprüfe JEDEN Rechenschritt mehrfach.**
+> **Dies ist die wichtigste Anforderung für mathematische Fächer. Überprüfe JEDEN Rechenschritt mehrfach.**
 
 - Alle Berechnungen müssen **Schritt für Schritt** nachvollziehbar sein
 - **Wahrscheinlichkeiten** müssen immer zwischen 0 und 1 liegen
@@ -85,6 +89,22 @@ Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollstän
   - Tatsächliches Signifikanzniveau angeben
   - Fehler 1. und 2. Art korrekt definieren und berechnen
 - Vor der Erstellung: Alle Berechnungen mit Python/Code-Ausführung verifizieren
+
+### 2b. Fachliche Korrektheit – KRITISCH (für textbasierte Fächer wie Deutsch)
+
+> **Dies ist die wichtigste Anforderung für textbasierte Fächer. Überprüfe ALLE Fakten und Textquellen sorgfältig.**
+
+- **Textquellen:** Nur **gemeinfreie Texte** verwenden (Autor mindestens 70 Jahre verstorben), z. B. von [Projekt Gutenberg](https://www.projekt-gutenberg.org/)
+- **Texttreue:** Textauszüge müssen werkgetreu wiedergegeben werden – keine eigenmächtigen Änderungen oder Kürzungen ohne Kennzeichnung
+- **Zeilennummerierung:** Alle Textauszüge mit fortlaufenden Zeilennummern versehen – als Tabelle formatieren
+- **Lesezeit:** Textlänge so wählen, dass das Lesen in die Bearbeitungszeit passt (Richtwert: max. 1–2 Seiten Prosa, 1 Gedicht, 1 Szene)
+- **Operatoren:** Aufgabenstellungen müssen klare Operatoren verwenden, die den drei Anforderungsbereichen (AFB) entsprechen:
+  - **AFB I** (Reproduktion): „benenne", „gib wieder", „fasse zusammen", „beschreibe"
+  - **AFB II** (Reorganisation/Transfer): „analysiere", „untersuche", „erläutere", „vergleiche"
+  - **AFB III** (Reflexion/Bewertung): „beurteile", „deute", „setze dich auseinander mit", „nimm Stellung"
+- **Epochenzuordnung:** Literarische Epochen, Strömungen und Gattungsbegriffe müssen fachlich korrekt sein
+- **Literarische Fachbegriffe:** Korrekte Verwendung von Begriffen wie Metrum, Reimschema, Erzählperspektive, Stilmittel etc.
+- Vor der Erstellung: Fakten zu Autoren, Werken und Epochen verifizieren
 
 ### 3. Bewertungsschema
 
@@ -185,7 +205,7 @@ Beispiel-Gerüst:
 
 ---
 
-## 📋 Struktur einer Klausur (`klausur.md`)
+## 📋 Struktur einer Klausur – Mathematik (`klausur.md`)
 
 ```markdown
 # {Fach}-Klausur – {Bundesland} {Klassenstufe}
@@ -227,7 +247,7 @@ b) {Teilaufgabe} [X BE]
 
 ---
 
-## 📋 Struktur einer Lösung (`loesung.md`)
+## 📋 Struktur einer Lösung – Mathematik (`loesung.md`)
 
 ```markdown
 # Musterlösung: {Fach}-Klausur – {Bundesland} {Klassenstufe}
@@ -261,7 +281,85 @@ $$\text{Formel}$$
 
 ---
 
+## 📋 Struktur einer Klausur – Deutsch / textbasiert (`klausur.md`)
+
+```markdown
+# {Fach}-Klausur – {Bundesland} {Klassenstufe}
+
+**Bearbeitungszeit:** XX Minuten  
+**Hilfsmittel:** Duden (Rechtschreibung)  
+**Gesamtpunktzahl:** XX BE  
+**Datum:** ..................  **Name:** ..................
+
+---
+
+> 📝 **Tipps von eurer Lehrkraft:**
+> - Lest euch alle Texte und Aufgaben erst einmal in Ruhe durch, bevor ihr mit dem Schreiben anfangt.
+> - Plant eure Zeit gut ein: ca. XX Minuten pro Aufgabe.
+> - Belegt eure Aussagen immer mit Textstellen (Zeilenangaben!).
+> - Achtet auf einen klaren Aufbau und sprachliche Richtigkeit – das fließt in die Bewertung ein.
+
+---
+
+## Aufgabe 1 – {Gattung}: {Aufgabentyp} (XX BE)
+
+{Einleitung zur Aufgabe}
+
+---
+
+**{Autor}: {Titel} ({Jahr})**
+
+| | |
+|---:|:---|
+| 1 | {Textzeile 1} |
+| 2 | {Textzeile 2} |
+| ... | ... |
+
+---
+
+a) {Teilaufgabe mit Operator} [X BE]
+b) {Teilaufgabe mit Operator} [X BE]
+
+---
+
+**Viel Erfolg! 🍀**
+```
+
+---
+
+## 📋 Struktur einer Lösung – Deutsch / textbasiert (`loesung.md`)
+
+```markdown
+# Musterlösung: {Fach}-Klausur – {Bundesland} {Klassenstufe}
+
+---
+
+### Aufgabe 1 – {Gattung}: {Aufgabentyp} (XX BE)
+
+#### a) {Kurztitel} [X BE]
+
+{Ausformulierte Musteranalyse mit Textbelegen (Zeilenangaben)}
+
+#### b) {Kurztitel} [X BE]
+
+...
+
+---
+
+## Bewertungsübersicht
+
+| Aufgabe | Teilaufgabe | Inhalt | BE |
+|---------|-------------|--------|----|
+| 1       | a)          | ...    | X  |
+...
+| **Gesamt** |          |        | **XX** |
+```
+
+---
+
 ## ⚠️ Häufige Fehler – Diese musst du vermeiden
+
+### Mathematische Fächer
 
 | Fehler | Korrekt |
 |--------|---------|
@@ -272,6 +370,23 @@ $$\text{Formel}$$
 | Falsches Signifikanzniveau | Tatsächliches α aus der Verteilung bestimmen |
 | Vertauschen von Fehler 1./2. Art | Fehler 1. Art: H₀ fälschlich ablehnen; Fehler 2. Art: H₀ fälschlich beibehalten |
 | $\sigma$ statt $\sigma^2$ | Standardabweichung = $\sqrt{n \cdot p \cdot (1-p)}$, Varianz = $n \cdot p \cdot (1-p)$ |
+
+### Textbasierte Fächer (Deutsch etc.)
+
+| Fehler | Korrekt |
+|--------|---------|
+| Urheberrechtlich geschützter Text | Nur gemeinfreie Texte verwenden (Autor ≥ 70 Jahre verstorben) |
+| Text zu lang für Bearbeitungszeit | Textlänge so wählen, dass Lesen + Bearbeiten in die Zeit passt |
+| Textauszug ohne Zeilennummern | Alle Textpassagen mit fortlaufenden Zeilennummern versehen |
+| Aufgabe ohne klaren Operator | Immer eindeutigen Operator verwenden (analysiere, erläutere, deute, …) |
+| Analyse ohne Textbelege in der Lösung | Musterlösung muss konkrete Textstellen mit Zeilenangaben zitieren |
+| Falsche Epochenzuordnung | Epochen, Strömungen und Datierungen sorgfältig prüfen |
+| Falsche Gattungsbegriffe | Korrekte Fachterminologie verwenden (Metrum, Erzählperspektive, etc.) |
+
+### Allgemein (alle Fächer)
+
+| Fehler | Korrekt |
+|--------|---------|
 | Pipe `\|` in Inline-LaTeX | Kramdown bricht Formeln am `\|` auf → `\mid`, `\lvert`/`\rvert` verwenden |
 | Unterstriche `___` als Ausfüllzeile | Kramdown interpretiert `___` als Trennlinie/Emphasis → Punkte `..................` verwenden |
 
@@ -281,6 +396,15 @@ $$\text{Formel}$$
 
 Bevor du die Dateien commitest, überprüfe:
 
+### Immer (alle Fächer)
+
+- [ ] BE-Summen stimmen (Teilaufgaben + Gesamt)
+- [ ] YAML Front Matter vollständig (schulform, fach, bundesland, klassenstufe, nr, pruefungstyp, typ)
+- [ ] Keine `___` Unterstriche als Ausfüllzeilen (stattdessen `..................`)
+- [ ] Kein Pipe `|` in Inline-LaTeX
+
+### Mathematische Fächer (zusätzlich)
+
 - [ ] Alle Wahrscheinlichkeiten liegen zwischen 0 und 1
 - [ ] Alle Baumdiagramm-Äste summieren sich korrekt
 - [ ] E(X) und σ(X) stimmen mit n und p überein
@@ -288,5 +412,13 @@ Bevor du die Dateien commitest, überprüfe:
 - [ ] Tatsächliches Signifikanzniveau ≤ α
 - [ ] Beobachtetes Ergebnis korrekt mit Ablehnungsbereich verglichen
 - [ ] Alle Berechnungen wurden mit Code/Rechner verifiziert
-- [ ] BE-Summen stimmen (Teilaufgaben + Gesamt)
 - [ ] Musterlösung enthält vollständige Rechenwege (keine übersprungenen Schritte)
+
+### Textbasierte Fächer (zusätzlich)
+
+- [ ] Alle verwendeten Texte sind gemeinfrei (Autor ≥ 70 Jahre verstorben)
+- [ ] Textauszüge haben fortlaufende Zeilennummern
+- [ ] Aufgaben verwenden klare Operatoren (AFB I–III)
+- [ ] Musterlösung enthält konkrete Textbelege mit Zeilenangaben
+- [ ] Epochen, Autoren und Werke sind fachlich korrekt zugeordnet
+- [ ] Textlänge passt zur Bearbeitungszeit

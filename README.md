@@ -35,6 +35,7 @@ examination-training/
 | Schulform  | Fach        | Bundesland | Klassenstufe | Typ     | Nr. | Bearbeitungszeit |
 |------------|-------------|------------|--------------|---------|-----|-----------------|
 | Gymnasium  | Stochastik  | Bayern     | 12. Klasse   | Klausur | 01  | 90 Minuten      |
+| Gymnasium  | Deutsch     | Bayern     | 12. Klasse   | Klausur | 01  | 180 Minuten     |
 
 ---
 
