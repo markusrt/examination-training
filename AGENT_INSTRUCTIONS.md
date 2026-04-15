@@ -273,6 +273,7 @@ $$\text{Formel}$$
 | Vertauschen von Fehler 1./2. Art | Fehler 1. Art: H₀ fälschlich ablehnen; Fehler 2. Art: H₀ fälschlich beibehalten |
 | $\sigma$ statt $\sigma^2$ | Standardabweichung = $\sqrt{n \cdot p \cdot (1-p)}$, Varianz = $n \cdot p \cdot (1-p)$ |
 | Pipe `\|` in Inline-LaTeX | Kramdown bricht Formeln am `\|` auf → `\mid`, `\lvert`/`\rvert` verwenden |
+| Unterstriche `___` als Ausfüllzeile | Kramdown interpretiert `___` als Trennlinie/Emphasis → Punkte `..................` verwenden |
 
 ---
 

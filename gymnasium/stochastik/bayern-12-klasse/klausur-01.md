@@ -17,7 +17,7 @@ gesamtpunktzahl: "50 BE"
 **Bearbeitungszeit:** 90 Minuten  
 **Hilfsmittel:** Teil A: keine Hilfsmittel | Teil B: CAS-Rechner, Formelsammlung  
 **Gesamtpunktzahl:** 50 BE  
-**Datum:** _______________  **Name:** _______________
+**Datum:** ..................  **Name:** ..................
 
 ---
 
