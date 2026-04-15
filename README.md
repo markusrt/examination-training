@@ -18,21 +18,23 @@ Dieses Repository stellt Übungsklausuren zur Vorbereitung auf das Abitur bereit
 examination-training/
 ├── README.md                           ← Diese Datei
 ├── AGENT_INSTRUCTIONS.md               ← Anweisungen für KI-Agenten
-└── klausuren/
+└── {schulform}/
     └── {fach}/
         └── {bundesland}-{klassenstufe}/
-            ├── klausur-01.md           ← Aufgabenblatt Nr. 1
-            ├── loesung-01.md           ← Musterlösung Nr. 1
-            ├── klausur-02.md           ← Aufgabenblatt Nr. 2
-            ├── loesung-02.md           ← Musterlösung Nr. 2
+            ├── klausur-01.md           ← Klausur Nr. 1 (Aufgaben)
+            ├── loesung-klausur-01.md   ← Musterlösung zu Klausur Nr. 1
+            ├── klausur-02.md           ← Klausur Nr. 2 (Aufgaben)
+            ├── loesung-klausur-02.md   ← Musterlösung zu Klausur Nr. 2
+            ├── stegreifaufgabe-01.md   ← Stegreifaufgabe Nr. 1
+            ├── loesung-stegreifaufgabe-01.md
             └── ...
 ```
 
-### Verfügbare Klausuren
+### Verfügbare Prüfungen
 
-| Fach        | Bundesland | Klassenstufe | Nr. | Niveau      | Bearbeitungszeit |
-|-------------|------------|--------------|-----|-------------|-----------------|
-| Stochastik  | Bayern     | 12. Klasse   | 01  | Oberstufe   | 90 Minuten      |
+| Schulform  | Fach        | Bundesland | Klassenstufe | Typ     | Nr. | Bearbeitungszeit |
+|------------|-------------|------------|--------------|---------|-----|-----------------|
+| Gymnasium  | Stochastik  | Bayern     | 12. Klasse   | Klausur | 01  | 90 Minuten      |
 
 ---
 
@@ -53,11 +55,11 @@ examination-training/
 
 ## 🤝 Beitragen
 
-Neue Klausuren können über einen Pull Request beigetragen werden. Bitte halte dich dabei an die bestehende Ordnerstruktur:
+Neue Prüfungen können über einen Pull Request beigetragen werden. Bitte halte dich dabei an die bestehende Ordnerstruktur:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/klausur-{nr}.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/loesung-{nr}.md
+{schulform}/{fach}/{bundesland}-{klassenstufe}/{typ}-{nr}.md
+{schulform}/{fach}/{bundesland}-{klassenstufe}/loesung-{typ}-{nr}.md
 ```
 
 Weitere Hinweise zur Erstellung korrekter Aufgaben für KI-Agenten findest du in [`AGENT_INSTRUCTIONS.md`](AGENT_INSTRUCTIONS.md).
@@ -76,6 +78,8 @@ Die Klausuren sind auch als Website mit PDF-Download verfügbar:
 **[https://markusrt.github.io/examination-training/](https://markusrt.github.io/examination-training/)**
 
 Die Seite wird automatisch über GitHub Actions gebaut und enthält:
-- Navigationsseite mit Übersicht aller verfügbaren Klausuren
+- Navigationsseite mit Übersicht aller verfügbaren Prüfungen
 - Aufgaben und Lösungen mit korrekt gerenderten LaTeX-Formeln und Mermaid-Diagrammen
-- Druckfertige PDF-Downloads für jede Klausur und Lösung
+- Druckfertige PDF-Downloads für jede Prüfung und Lösung
+
+> **Einrichtung:** Unter *Settings → Pages → Source* muss **GitHub Actions** ausgewählt werden.

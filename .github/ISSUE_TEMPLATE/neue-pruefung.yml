@@ -1,0 +1,90 @@
+name: "📝 Neue Prüfung erstellen"
+description: "Fordere eine neue Übungsprüfung an (Klausur, Schulaufgabe, Stegreifaufgabe, …)"
+title: "[Prüfung] {Fach} – {Schulform} {Klassenstufe} ({Bundesland})"
+labels: ["neue-pruefung"]
+body:
+  - type: dropdown
+    id: schulform
+    attributes:
+      label: Schulform
+      description: "Für welche Schulform soll die Prüfung erstellt werden?"
+      options:
+        - Gymnasium
+        - Realschule
+        - FOS/BOS
+        - Gesamtschule
+        - Andere
+    validations:
+      required: true
+
+  - type: input
+    id: fach
+    attributes:
+      label: Fach
+      description: "Z. B. Stochastik, Analysis, Geometrie, Lineare Algebra"
+      placeholder: "Stochastik"
+    validations:
+      required: true
+
+  - type: input
+    id: bundesland
+    attributes:
+      label: Bundesland
+      description: "Z. B. Bayern, NRW, Baden-Württemberg"
+      placeholder: "Bayern"
+    validations:
+      required: true
+
+  - type: input
+    id: klassenstufe
+    attributes:
+      label: Klassenstufe
+      description: "Z. B. 12. Klasse, 13. Klasse"
+      placeholder: "12. Klasse"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pruefungstyp
+    attributes:
+      label: Prüfungstyp
+      description: "Welche Art von Prüfung soll erstellt werden?"
+      options:
+        - Klausur
+        - Schulaufgabe
+        - Kurzarbeit
+        - Stegreifaufgabe
+        - Extemporale
+        - Übungsblatt
+    validations:
+      required: true
+
+  - type: input
+    id: bearbeitungszeit
+    attributes:
+      label: Bearbeitungszeit
+      description: "Gewünschte Bearbeitungszeit in Minuten"
+      placeholder: "90"
+    validations:
+      required: false
+
+  - type: textarea
+    id: themen
+    attributes:
+      label: Themen / Schwerpunkte
+      description: "Welche Themen sollen abgedeckt werden?"
+      placeholder: |
+        - Bedingte Wahrscheinlichkeit
+        - Binomialverteilung
+        - Hypothesentest (linksseitig)
+    validations:
+      required: false
+
+  - type: textarea
+    id: anmerkungen
+    attributes:
+      label: Weitere Anmerkungen
+      description: "Zusätzliche Wünsche oder Hinweise"
+      placeholder: "Z. B. bestimmter Schwierigkeitsgrad, Sachkontexte, …"
+    validations:
+      required: false

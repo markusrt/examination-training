@@ -20,7 +20,7 @@ exclude:
 
 defaults:
   - scope:
-      path: "klausuren"
+      path: "gymnasium"
     values:
       layout: exam
   - scope:

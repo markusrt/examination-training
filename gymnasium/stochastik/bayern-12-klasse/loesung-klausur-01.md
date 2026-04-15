@@ -1,10 +1,12 @@
 ---
 layout: exam
-title: "Musterlösung: Stochastik-Klausur 01 – Bayern 12. Klasse"
+title: "Musterlösung: Stochastik-Klausur 01 – Bayern 12. Klasse (Gymnasium)"
+schulform: Gymnasium
 fach: Stochastik
 bundesland: Bayern
 klassenstufe: "12. Klasse"
 nr: "01"
+pruefungstyp: Klausur
 typ: loesung
 ---
 

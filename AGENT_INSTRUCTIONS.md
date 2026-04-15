@@ -6,28 +6,37 @@ Dieses Dokument enthält verbindliche Anweisungen für KI-Agenten (z. B. GitHub 
 
 ## 🎯 Ziel
 
-Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung – abgestimmt auf das Fach, das Bundesland und die Klassenstufe, die im Prompt angegeben werden. Qualität und mathematische Korrektheit haben absoluten Vorrang vor Quantität.
+Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung – abgestimmt auf Schulform, Fach, Bundesland und Klassenstufe, die im Prompt angegeben werden. Qualität und mathematische Korrektheit haben absoluten Vorrang vor Quantität.
 
 ---
 
 ## 📁 Ordnerstruktur
 
-Klausuren werden immer nach diesem Schema abgelegt:
+Prüfungen werden immer nach diesem Schema abgelegt:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/klausur-{nr}.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/loesung-{nr}.md
+{schulform}/{fach}/{bundesland}-{klassenstufe}/{typ}-{nr}.md
+{schulform}/{fach}/{bundesland}-{klassenstufe}/loesung-{typ}-{nr}.md
 ```
 
-`{nr}` ist eine **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …), die Teil des Dateinamens ist. So kann es pro Fach, Bundesland und Klassenstufe mehrere Klausuren geben.
+- `{schulform}`: z. B. `gymnasium`, `realschule`, `fos`
+- `{fach}`: z. B. `stochastik`, `analysis`, `geometrie`
+- `{bundesland}-{klassenstufe}`: z. B. `bayern-12-klasse`, `nrw-13-klasse`
+- `{typ}`: Art der Prüfung – z. B. `klausur`, `schulaufgabe`, `kurzarbeit`, `stegreifaufgabe`
+- `{nr}`: **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …) pro Typ
+- Die Lösung wird mit dem Präfix `loesung-` vor dem Typ-Namen abgelegt
 
 Beispiele:
-- `klausuren/stochastik/bayern-12-klasse/klausur-01.md`
-- `klausuren/stochastik/bayern-12-klasse/klausur-02.md`
-- `klausuren/analysis/nrw-13-klasse/klausur-01.md`
-- `klausuren/geometrie/berlin-11-klasse/klausur-01.md`
+- `gymnasium/stochastik/bayern-12-klasse/klausur-01.md`
+- `gymnasium/stochastik/bayern-12-klasse/loesung-klausur-01.md`
+- `gymnasium/stochastik/bayern-12-klasse/klausur-02.md`
+- `gymnasium/stochastik/bayern-12-klasse/loesung-klausur-02.md`
+- `gymnasium/analysis/nrw-13-klasse/schulaufgabe-01.md`
+- `gymnasium/analysis/nrw-13-klasse/loesung-schulaufgabe-01.md`
+- `gymnasium/stochastik/bayern-12-klasse/stegreifaufgabe-01.md`
+- `gymnasium/stochastik/bayern-12-klasse/loesung-stegreifaufgabe-01.md`
 
-Beim Anlegen einer neuen Klausur: Prüfe, welche Nummern bereits existieren, und verwende die nächste freie Nummer.
+Beim Anlegen einer neuen Prüfung: Prüfe, welche Nummern pro Typ bereits existieren, und verwende die nächste freie Nummer.
 
 ---
 
@@ -35,9 +44,10 @@ Beim Anlegen einer neuen Klausur: Prüfe, welche Nummern bereits existieren, und
 
 ### 1. Format
 
-- Aufgaben und Lösung **immer** als separate Markdown-Dateien: `klausur-{nr}.md` und `loesung-{nr}.md`
+- Aufgaben und Lösung **immer** als separate Markdown-Dateien: `{typ}-{nr}.md` und `loesung-{typ}-{nr}.md`
 - Jede Datei beginnt mit einem aussagekräftigen Titel (z. B. `# Stochastik-Klausur – Bayern 12. Klasse`)
 - Metadaten am Anfang: Bearbeitungszeit, Hilfsmittel, Gesamtpunktzahl
+- YAML Front Matter mit: `schulform`, `fach`, `bundesland`, `klassenstufe`, `nr`, `pruefungstyp`, `typ` (aufgabe/loesung)
 
 ### 2. Mathematische Korrektheit – KRITISCH
 

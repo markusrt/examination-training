@@ -2,22 +2,28 @@
 layout: default
 ---
 
-{% if page.fach and page.bundesland and page.klassenstufe %}
+{% if page.schulform or page.fach or page.bundesland %}
 <div class="exam-meta">
-  <span class="badge">📘 {{ page.fach }}</span>
-  <span class="badge">📍 {{ page.bundesland }}</span>
-  <span class="badge">🎓 {{ page.klassenstufe }}</span>
-  {% if page.nr %}<span class="badge">#{{ page.nr }}</span>{% endif %}
+  {% if page.schulform %}<span class="badge">🏫 {{ page.schulform }}</span>{% endif %}
+  {% if page.fach %}<span class="badge">📘 {{ page.fach }}</span>{% endif %}
+  {% if page.bundesland %}<span class="badge">📍 {{ page.bundesland }}</span>{% endif %}
+  {% if page.klassenstufe %}<span class="badge">🎓 {{ page.klassenstufe }}</span>{% endif %}
+  {% if page.pruefungstyp %}<span class="badge">📝 {{ page.pruefungstyp }} #{{ page.nr }}</span>{% endif %}
 </div>
 {% endif %}
 
+{% assign pruefungstyp_lower = page.pruefungstyp | downcase %}
 <div class="exam-actions no-print">
-  {% if page.typ == 'klausur' %}
-    {% assign loesung_url = page.url | replace: 'klausur-', 'loesung-' %}
+  {% if page.typ == 'aufgabe' %}
+    {% assign exam_stem = pruefungstyp_lower | append: '-' | append: page.nr %}
+    {% assign loesung_stem = 'loesung-' | append: exam_stem %}
+    {% assign loesung_url = page.url | replace: exam_stem, loesung_stem %}
     <a class="btn btn-outline" href="{{ loesung_url | relative_url }}">📝 Musterlösung ansehen</a>
   {% elsif page.typ == 'loesung' %}
-    {% assign klausur_url = page.url | replace: 'loesung-', 'klausur-' %}
-    <a class="btn btn-outline" href="{{ klausur_url | relative_url }}">📋 Klausur ansehen</a>
+    {% assign exam_stem = pruefungstyp_lower | append: '-' | append: page.nr %}
+    {% assign loesung_stem = 'loesung-' | append: exam_stem %}
+    {% assign aufgabe_url = page.url | replace: loesung_stem, exam_stem %}
+    <a class="btn btn-outline" href="{{ aufgabe_url | relative_url }}">📋 Aufgaben ansehen</a>
   {% endif %}
 
   {% assign pdf_url = page.url | replace: '.html', '.pdf' %}

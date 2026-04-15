@@ -68,14 +68,19 @@ function serve() {
 /* ---------- find exam HTML pages ---------- */
 
 async function findExamPages(dir, pages = []) {
-  const entries = await readdir(dir, { withFileTypes: true });
+  let entries;
+  try {
+    entries = await readdir(dir, { withFileTypes: true });
+  } catch {
+    return pages;
+  }
   for (const entry of entries) {
     const fullPath = join(dir, entry.name);
     if (entry.isDirectory()) {
       await findExamPages(fullPath, pages);
     } else if (
       entry.name.endsWith(".html") &&
-      (entry.name.startsWith("klausur-") || entry.name.startsWith("loesung-"))
+      entry.name !== "index.html"
     ) {
       pages.push(fullPath);
     }
@@ -94,7 +99,7 @@ async function main() {
   });
 
   try {
-    const htmlPages = await findExamPages(join(SITE_DIR, "klausuren"));
+    const htmlPages = await findExamPages(join(SITE_DIR, "gymnasium"));
 
     if (htmlPages.length === 0) {
       console.log("No exam pages found – skipping PDF generation.");
