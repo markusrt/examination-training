@@ -21,8 +21,11 @@ gesamtpunktzahl: "50 BE"
 
 ---
 
-> **Hinweis:** Schreibe alle Lösungswege vollständig auf. Ergebnisse ohne Rechenweg werden nicht bewertet.
-> Runde Wahrscheinlichkeiten auf vier Dezimalstellen und Prozentwerte auf zwei Dezimalstellen.
+> 📝 **Tipps von eurer Lehrkraft:**
+> - Lest euch alle Aufgaben erst einmal in Ruhe durch, bevor ihr mit dem Schreiben anfangt.
+> - Schreibt eure Lösungswege **vollständig** auf – Ergebnisse ohne Rechenweg werden nicht gewertet!
+> - Rundet Wahrscheinlichkeiten auf vier Dezimalstellen und Prozentwerte auf zwei Dezimalstellen.
+> - **Zeiteinteilung:** Für Teil A habt ihr ca. 35 Minuten, für Teil B ca. 55 Minuten. Lasst euch nicht an einer Aufgabe festbeißen – lieber erstmal weitermachen und später zurückkommen.
 
 ---
 
@@ -113,6 +116,10 @@ Die Zufallsvariable $X$ gibt an, wie viele der 25 befragten Personen gewonnen ha
 **d)** Angenommen, die tatsächliche Gewinnwahrscheinlichkeit beträgt $p = 0{,}20$. Berechne die Wahrscheinlichkeit des **Fehlers 2. Art** für diesen Wert. [5 BE]
 
 **e)** Erläutere in eigenen Worten den Unterschied zwischen dem **Fehler 1. Art** und dem **Fehler 2. Art** im Kontext dieser Lotterie-Aufgabe. [2 BE]
+
+---
+
+**Viel Erfolg! 🍀**
 
 ---
 

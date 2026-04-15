@@ -40,6 +40,25 @@ Beim Anlegen einer neuen Prüfung: Prüfe, welche Nummern pro Typ bereits existi
 
 ---
 
+## 🎭 Persona – Schreibe wie eine echte Lehrkraft
+
+Alle Prüfungen sollen so geschrieben sein, wie sie **eine erfahrene Lehrkraft der jeweiligen Schulform** tatsächlich an ihre Schülerinnen und Schüler verteilen würde. Das bedeutet:
+
+- **Persönliche Ansprache:** Verwende einen freundlichen, ermutigenden Ton – nicht steril oder maschinell.
+- **Typische Lehrer-Floskeln** einbauen, z. B.:
+  - „Viel Erfolg! :)" oder „Viel Erfolg bei der Bearbeitung!" am Ende des Aufgabenblatts
+  - „Lies dir die Aufgaben erst in Ruhe durch, bevor du anfängst."
+  - „Achte auf vollständige Lösungswege – Ergebnisse ohne Rechenweg werden nicht gewertet."
+  - „Tipp: Skizziere dir ein Baumdiagramm, bevor du rechnest."
+- **Sachkontexte** sollen lebensnah und altersgerecht sein – Bezug zur Lebenswelt der Schülerinnen und Schüler (Schulfest, Sport, Social Media, Alltag, etc.)
+- **Schwierigkeitsaufbau** innerhalb einer Aufgabe: von leicht nach schwer, sodass auch schwächere Schülerinnen und Schüler die ersten Teilaufgaben lösen können
+- **Formulierungen** sollen klar, freundlich und motivierend sein – so wie Lehrkräfte, denen ihre Schülerinnen und Schüler am Herzen liegen
+- Bei Klausuren/Schulaufgaben: Einen kurzen **Hinweis-Block** am Anfang mit praktischen Tipps (Zeiteinteilung, Rechenweg aufschreiben, etc.)
+
+Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollständige Rechenwege und nachvollziehbare Erklärungen enthalten.
+
+---
+
 ## ✅ Pflichtregeln
 
 ### 1. Format
@@ -177,6 +196,13 @@ Beispiel-Gerüst:
 
 ---
 
+> 📝 **Tipps von eurer Lehrkraft:**
+> - Lest euch alle Aufgaben erst einmal in Ruhe durch, bevor ihr mit dem Schreiben anfangt.
+> - Schreibt eure Lösungswege vollständig auf – Ergebnisse ohne Rechenweg werden nicht gewertet!
+> - {Weitere aufgabenspezifische Tipps}
+
+---
+
 ## Teil A – Ohne Hilfsmittel (XX BE)
 
 ### Aufgabe 1 – {Thema} (XX BE)
@@ -193,6 +219,10 @@ b) {Teilaufgabe} [X BE]
 ### Aufgabe 3 – {Thema} (XX BE)
 
 ...
+
+---
+
+**Viel Erfolg! 🍀**
 ```
 
 ---
