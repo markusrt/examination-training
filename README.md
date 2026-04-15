@@ -21,15 +21,20 @@ examination-training/
 └── klausuren/
     └── {fach}/
         └── {bundesland}-{klassenstufe}/
-            ├── klausur.md              ← Aufgabenblatt
-            └── loesung.md             ← Musterlösung
+            ├── 01/
+            │   ├── klausur.md          ← Aufgabenblatt
+            │   └── loesung.md         ← Musterlösung
+            ├── 02/
+            │   ├── klausur.md
+            │   └── loesung.md
+            └── ...
 ```
 
 ### Verfügbare Klausuren
 
-| Fach        | Bundesland | Klassenstufe | Niveau      | Bearbeitungszeit |
-|-------------|------------|--------------|-------------|-----------------|
-| Stochastik  | Bayern     | 12. Klasse   | Oberstufe   | 90 Minuten      |
+| Fach        | Bundesland | Klassenstufe | Nr. | Niveau      | Bearbeitungszeit |
+|-------------|------------|--------------|-----|-------------|-----------------|
+| Stochastik  | Bayern     | 12. Klasse   | 01  | Oberstufe   | 90 Minuten      |
 
 ---
 
@@ -53,8 +58,8 @@ examination-training/
 Neue Klausuren können über einen Pull Request beigetragen werden. Bitte halte dich dabei an die bestehende Ordnerstruktur:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/klausur.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/loesung.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/klausur.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/loesung.md
 ```
 
 Weitere Hinweise zur Erstellung korrekter Aufgaben für KI-Agenten findest du in [`AGENT_INSTRUCTIONS.md`](AGENT_INSTRUCTIONS.md).

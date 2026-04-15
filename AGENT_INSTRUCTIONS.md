@@ -15,14 +15,19 @@ Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung
 Klausuren werden immer nach diesem Schema abgelegt:
 
 ```
-klausuren/{fach}/{bundesland}-{klassenstufe}/klausur.md
-klausuren/{fach}/{bundesland}-{klassenstufe}/loesung.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/klausur.md
+klausuren/{fach}/{bundesland}-{klassenstufe}/{nr}/loesung.md
 ```
 
+`{nr}` ist eine **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …), sodass es pro Fach, Bundesland und Klassenstufe mehrere Klausuren geben kann.
+
 Beispiele:
-- `klausuren/stochastik/bayern-12-klasse/`
-- `klausuren/analysis/nrw-13-klasse/`
-- `klausuren/geometrie/berlin-11-klasse/`
+- `klausuren/stochastik/bayern-12-klasse/01/`
+- `klausuren/stochastik/bayern-12-klasse/02/`
+- `klausuren/analysis/nrw-13-klasse/01/`
+- `klausuren/geometrie/berlin-11-klasse/01/`
+
+Beim Anlegen einer neuen Klausur: Prüfe, welche Nummern bereits existieren, und verwende die nächste freie Nummer.
 
 ---
 
