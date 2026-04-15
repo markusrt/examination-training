@@ -93,8 +93,13 @@ Beim Anlegen einer neuen Prüfung: Prüfe, welche Nummern pro Typ bereits existi
 
 Verwende LaTeX-Syntax direkt im Markdown:
 
-- **Inline-Formeln**: `$...$` – z. B. `$P(A|B) = \frac{P(A \cap B)}{P(B)}$`
+- **Inline-Formeln**: `$...$` – z. B. `$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$`
 - **Block-Formeln**: `$$...$$` – für mehrzeilige oder hervorgehobene Formeln
+
+> ⚠️ **Wichtig:** Verwende **niemals** das Pipe-Zeichen `|` direkt in Inline-Formeln – kramdown/GFM interpretiert es als Tabellen-Trenner und bricht die Formel auf. Stattdessen:
+> - Bedingte Wahrscheinlichkeit: `\mid` statt `|` → `$P(A \mid B)$`
+> - Betrag / Mächtigkeit: `\lvert` und `\rvert` statt `|` → `$\lvert S\rvert = 18$`
+> - Norm: `\lVert` und `\rVert` statt `||` → `$\lVert x\rVert$`
 
 Beispiele:
 ```markdown
@@ -237,6 +242,7 @@ $$\text{Formel}$$
 | Falsches Signifikanzniveau | Tatsächliches α aus der Verteilung bestimmen |
 | Vertauschen von Fehler 1./2. Art | Fehler 1. Art: H₀ fälschlich ablehnen; Fehler 2. Art: H₀ fälschlich beibehalten |
 | $\sigma$ statt $\sigma^2$ | Standardabweichung = $\sqrt{n \cdot p \cdot (1-p)}$, Varianz = $n \cdot p \cdot (1-p)$ |
+| Pipe `\|` in Inline-LaTeX | Kramdown bricht Formeln am `\|` auf → `\mid`, `\lvert`/`\rvert` verwenden |
 
 ---
 
