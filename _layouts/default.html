@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- MathJax 3 -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Convert ```mermaid code blocks to <div class="mermaid">
+      document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
+        var pre = code.parentElement;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code.textContent;
+        pre.replaceWith(div);
+      });
+      mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    });
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="site-title" href="{{ '/' | relative_url }}">📚 Examination Training</a>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Übersicht</a>
+    </nav>
+  </header>
+
+  <main class="content-wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    Examination Training – Abitur-Übungsklausuren &middot;
+    <a href="https://github.com/markusrt/examination-training">GitHub</a>
+  </footer>
+
+</body>
+</html>
