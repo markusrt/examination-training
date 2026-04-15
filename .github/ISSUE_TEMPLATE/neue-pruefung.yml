@@ -1,6 +1,6 @@
 name: "📝 Neue Prüfung erstellen"
 description: "Fordere eine neue Übungsprüfung an (Klausur, Schulaufgabe, Stegreifaufgabe, …)"
-title: ""
+title: "[Prüfung] ..."
 labels: ["neue-pruefung"]
 body:
   - type: dropdown
