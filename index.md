@@ -99,19 +99,19 @@ _Noch keine Prüfungen vorhanden._
 
 <script>
 function applyFilters() {
-  var filters = {
+  const filters = {
     schulform: document.getElementById('filter-schulform').value,
     fach: document.getElementById('filter-fach').value,
     bundesland: document.getElementById('filter-bundesland').value,
     klassenstufe: document.getElementById('filter-klassenstufe').value,
     pruefungstyp: document.getElementById('filter-pruefungstyp').value
   };
-  var cards = document.querySelectorAll('#exam-grid .exam-card');
-  var visibleCount = 0;
-  cards.forEach(function(card) {
-    var show = true;
-    for (var key in filters) {
-      if (filters[key] && card.getAttribute('data-' + key) !== filters[key]) {
+  const cards = document.querySelectorAll('#exam-grid .exam-card');
+  let visibleCount = 0;
+  cards.forEach((card) => {
+    let show = true;
+    for (const [key, value] of Object.entries(filters)) {
+      if (value && card.getAttribute('data-' + key) !== value) {
         show = false;
         break;
       }
