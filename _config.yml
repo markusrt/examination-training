@@ -24,6 +24,10 @@ defaults:
     values:
       layout: exam
   - scope:
+      path: "realschule"
+    values:
+      layout: exam
+  - scope:
       path: ""
     values:
       layout: default
