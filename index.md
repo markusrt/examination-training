@@ -3,9 +3,9 @@ layout: default
 title: "📚 Examination Training – Übersicht"
 ---
 
-# Abitur-Übungsklausuren
+# Übungsklausuren & Prüfungen
 
-Willkommen bei **Examination Training** – einer Sammlung fachlich geprüfter Übungsklausuren zur Vorbereitung auf das Abitur. Alle Aufgaben orientieren sich an den offiziellen Lehrplänen der deutschen Bundesländer.
+Willkommen bei **Examination Training** – einer wachsenden Sammlung fachlich geprüfter Übungsprüfungen für verschiedene Schulformen und Klassenstufen. Alle Aufgaben orientieren sich an den offiziellen Lehrplänen der deutschen Bundesländer.
 
 ---
 
@@ -141,3 +141,13 @@ function resetFilters() {
 - **PDF-Download**: Jede Prüfung und Lösung steht als druckfertiges PDF bereit.
 
 Weitere Details und Beitragshinweise findest du im [GitHub-Repository](https://github.com/markusrt/examination-training).
+
+---
+
+## 🙋 Mitmachen & Beitragen
+
+Fehlt eine Prüfung für dein Fach oder deine Schulform? Du kannst ganz einfach eine neue Prüfung anfragen:
+
+👉 [Neue Prüfung anfordern](https://github.com/markusrt/examination-training/issues/new?template=neue-pruefung.yml)
+
+Füll einfach das Formular aus – wir kümmern uns um den Rest!

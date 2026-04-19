@@ -99,7 +99,7 @@ async function main() {
   });
 
   try {
-    const htmlPages = await findExamPages(join(SITE_DIR, "gymnasium"));
+    const htmlPages = await findExamPages(SITE_DIR);
 
     if (htmlPages.length === 0) {
       console.log("No exam pages found – skipping PDF generation.");
