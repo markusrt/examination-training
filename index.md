@@ -131,7 +131,12 @@ function resetFilters() {
   applyFilters();
 }
 
-window.addEventListener('pageshow', applyFilters);
+document.addEventListener('DOMContentLoaded', applyFilters);
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    applyFilters();
+  }
+});
 </script>
 
 ---
