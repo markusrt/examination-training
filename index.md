@@ -130,6 +130,8 @@ function resetFilters() {
   document.getElementById('filter-pruefungstyp').value = '';
   applyFilters();
 }
+
+window.addEventListener('pageshow', applyFilters);
 </script>
 
 ---
