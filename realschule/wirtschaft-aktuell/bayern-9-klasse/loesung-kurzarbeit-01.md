@@ -1,7 +1,7 @@
 ---
 layout: exam
-title: "Musterlösung: Wirtschaft Aktuell – Kurzarbeit 01 – Bayern 9. Klasse (Gymnasium)"
-schulform: Gymnasium
+title: "Musterlösung: Wirtschaft Aktuell – Kurzarbeit 01 – Bayern 9. Klasse (Realschule)"
+schulform: Realschule
 fach: Wirtschaft Aktuell
 bundesland: Bayern
 klassenstufe: "9. Klasse"
@@ -10,7 +10,7 @@ pruefungstyp: Kurzarbeit
 typ: loesung
 ---
 
-# Musterlösung: Wirtschaft Aktuell – Kurzarbeit – Bayern 9. Klasse
+# Musterlösung: Wirtschaft Aktuell – Kurzarbeit – Bayern 9. Klasse (Realschule)
 
 > Die folgenden Musterlösungen geben die erwarteten Inhalte wieder. Sinngemäß richtige Antworten mit eigenen Worten werden ebenso anerkannt, sofern die Fachbegriffe korrekt verwendet werden.
 

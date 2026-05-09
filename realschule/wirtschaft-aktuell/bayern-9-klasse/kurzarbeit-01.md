@@ -1,7 +1,7 @@
 ---
 layout: exam
-title: "Wirtschaft Aktuell – Kurzarbeit 01 – Bayern 9. Klasse (Gymnasium)"
-schulform: Gymnasium
+title: "Wirtschaft Aktuell – Kurzarbeit 01 – Bayern 9. Klasse (Realschule)"
+schulform: Realschule
 fach: Wirtschaft Aktuell
 bundesland: Bayern
 klassenstufe: "9. Klasse"
@@ -12,7 +12,7 @@ bearbeitungszeit: "30 Minuten"
 gesamtpunktzahl: "25 BE"
 ---
 
-# Wirtschaft Aktuell – Kurzarbeit – Bayern 9. Klasse
+# Wirtschaft Aktuell – Kurzarbeit – Bayern 9. Klasse (Realschule)
 
 **Bearbeitungszeit:** 30 Minuten
 **Hilfsmittel:** keine
