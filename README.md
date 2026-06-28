@@ -36,6 +36,7 @@ examination-training/
 |------------|-------------|------------|--------------|---------|-----|-----------------|
 | Gymnasium  | Stochastik  | Bayern     | 12. Klasse   | Klausur | 01  | 90 Minuten      |
 | Gymnasium  | Deutsch     | Bayern     | 12. Klasse   | Klausur | 01  | 180 Minuten     |
+| Gymnasium  | Geometrie   | Bayern     | 12. Klasse   | Stegreifaufgabe | 01 | 30 Minuten |
 
 ---
 
