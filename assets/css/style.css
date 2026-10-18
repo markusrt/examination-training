@@ -310,6 +310,12 @@ mjx-container {
   max-width: 100%;
 }
 
+/* ===== Abbildungen (z. B. Funktionsgraphen als SVG) ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ===== Print / PDF styles ===== */
 @media print {
   .site-header,

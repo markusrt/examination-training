@@ -38,6 +38,9 @@ examination-training/
 | Gymnasium  | Deutsch     | Bayern     | 12. Klasse   | Klausur | 01  | 180 Minuten     |
 | Gymnasium  | Geometrie   | Bayern     | 12. Klasse   | Stegreifaufgabe | 01 | 30 Minuten |
 | Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Übungsblatt | 01 | 30 Minuten |
+| Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 01 | 20 Minuten |
+| Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 02 | 20 Minuten |
+| Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 03 | 20 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 01 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 02 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Stegreifaufgabe | 01 | 30 Minuten |
