@@ -22,7 +22,7 @@ Prüfungen werden immer nach diesem Schema abgelegt:
 - `{schulform}`: z. B. `gymnasium`, `realschule`, `fos`
 - `{fach}`: z. B. `stochastik`, `analysis`, `geometrie`, `deutsch`
 - `{bundesland}-{klassenstufe}`: z. B. `bayern-12-klasse`, `nrw-13-klasse`
-- `{typ}`: Art der Prüfung – z. B. `klausur`, `schulaufgabe`, `kurzarbeit`, `stegreifaufgabe`
+- `{typ}`: Art der Prüfung – z. B. `klausur`, `schulaufgabe`, `kurzarbeit`, `stegreifaufgabe`, `uebungsblatt` (Dateinamen ohne Umlaute: ä→ae, ö→oe, ü→ue; im Front Matter `pruefungstyp` darf der Umlaut stehen, z. B. `Übungsblatt`)
 - `{nr}`: **zweistellige, fortlaufende Nummer** (`01`, `02`, `03`, …) pro Typ
 - Die Lösung wird mit dem Präfix `loesung-` vor dem Typ-Namen abgelegt
 

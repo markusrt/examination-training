@@ -60,8 +60,7 @@ Willkommen bei **Examination Training** – einer wachsenden Sammlung fachlich g
 <div class="exam-grid" id="exam-grid">
 
 {% for exam in exams %}
-  {% assign pruefungstyp_lower = exam.pruefungstyp | downcase %}
-  {% assign exam_stem = pruefungstyp_lower | append: '-' | append: exam.nr %}
+  {% assign exam_stem = exam.name | remove: '.md' %}
   {% assign loesung_stem = 'loesung-' | append: exam_stem %}
   {% assign loesung_url = exam.url | replace: exam_stem, loesung_stem %}
   {% assign klausur_pdf = exam.url | replace: '.html', '.pdf' %}
