@@ -12,17 +12,16 @@ layout: default
 </div>
 {% endif %}
 
-{% assign pruefungstyp_lower = page.pruefungstyp | downcase %}
+{% comment %}Stem from the file name (e.g. "uebungsblatt-01"), so umlauts in pruefungstyp don't break links{% endcomment %}
+{% assign page_stem = page.name | remove: '.md' %}
 <div class="exam-actions no-print">
   {% if page.typ == 'aufgabe' %}
-    {% assign exam_stem = pruefungstyp_lower | append: '-' | append: page.nr %}
-    {% assign loesung_stem = 'loesung-' | append: exam_stem %}
-    {% assign loesung_url = page.url | replace: exam_stem, loesung_stem %}
+    {% assign loesung_stem = 'loesung-' | append: page_stem %}
+    {% assign loesung_url = page.url | replace: page_stem, loesung_stem %}
     <a class="btn btn-outline" href="{{ loesung_url | relative_url }}">📝 Musterlösung ansehen</a>
   {% elsif page.typ == 'loesung' %}
-    {% assign exam_stem = pruefungstyp_lower | append: '-' | append: page.nr %}
-    {% assign loesung_stem = 'loesung-' | append: exam_stem %}
-    {% assign aufgabe_url = page.url | replace: loesung_stem, exam_stem %}
+    {% assign exam_stem = page_stem | remove_first: 'loesung-' %}
+    {% assign aufgabe_url = page.url | replace: page_stem, exam_stem %}
     <a class="btn btn-outline" href="{{ aufgabe_url | relative_url }}">📋 Aufgaben ansehen</a>
   {% endif %}
 
