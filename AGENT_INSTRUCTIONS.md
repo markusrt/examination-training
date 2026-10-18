@@ -10,6 +10,17 @@ Erstelle fachlich korrekte, realistische Übungsklausuren zur Abiturvorbereitung
 
 ---
 
+## 🛠️ Verfügbare Werkzeuge
+
+Folgende Werkzeuge können in der Arbeitsumgebung als installiert vorausgesetzt werden:
+
+- **Node.js** (inkl. `npm`/`npx`) – für alle Verifikationsrechnungen (siehe Pflichtregel 2). Für symbolische Rechnungen oder exakte Brüche kann z. B. [`mathjs`](https://mathjs.org/) temporär installiert werden (`npm install mathjs` in einem temporären Verzeichnis außerhalb des Repositorys – kein `package.json`/`node_modules` committen).
+- **GitHub CLI (`gh`)** – installiert und angemeldet. Damit Issues lesen (`gh issue view`), Anhänge herunterladen, Pull Requests erstellen (`gh pr create`) und mergen (`gh pr merge`).
+
+> ⚠️ **Python kann nicht vorausgesetzt werden.** Verifikationsskripte daher in JavaScript (Node.js) schreiben.
+
+---
+
 ## 📁 Ordnerstruktur
 
 Prüfungen werden immer nach diesem Schema abgelegt:
@@ -88,7 +99,7 @@ Die Musterlösung darf sachlicher gehalten sein, sollte aber ebenfalls vollstän
   - Ablehnungsbereich korrekt aus der Verteilung ableiten (nicht aus der Normalapproximation schätzen)
   - Tatsächliches Signifikanzniveau angeben
   - Fehler 1. und 2. Art korrekt definieren und berechnen
-- Vor der Erstellung: Alle Berechnungen mit Python/Code-Ausführung verifizieren
+- Vor der Erstellung: Alle Berechnungen per Code-Ausführung mit **Node.js** verifizieren (z. B. Stammfunktionen durch numerisches Ableiten prüfen, bestimmte Integrale numerisch nachrechnen, Binomialverteilungen exakt summieren)
 
 ### 2b. Fachliche Korrektheit – KRITISCH (für textbasierte Fächer wie Deutsch)
 
@@ -411,7 +422,7 @@ Bevor du die Dateien commitest, überprüfe:
 - [ ] Ablehnungsbereich wurde aus der korrekten Verteilung (nicht Approximation) bestimmt
 - [ ] Tatsächliches Signifikanzniveau ≤ α
 - [ ] Beobachtetes Ergebnis korrekt mit Ablehnungsbereich verglichen
-- [ ] Alle Berechnungen wurden mit Code/Rechner verifiziert
+- [ ] Alle Berechnungen wurden mit Code (Node.js) verifiziert
 - [ ] Musterlösung enthält vollständige Rechenwege (keine übersprungenen Schritte)
 
 ### Textbasierte Fächer (zusätzlich)
