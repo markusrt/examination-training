@@ -41,6 +41,7 @@ examination-training/
 | Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 01 | 20 Minuten |
 | Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 02 | 20 Minuten |
 | Gymnasium  | Analysis    | Bayern     | 13. Klasse   | Stegreifaufgabe | 03 | 20 Minuten |
+| Gymnasium  | Biologie    | Bayern     | 13. Klasse   | Klausur | 01 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 01 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 02 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Stegreifaufgabe | 01 | 30 Minuten |
