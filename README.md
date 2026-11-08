@@ -45,6 +45,8 @@ examination-training/
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 01 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Schulaufgabe | 02 | 60 Minuten |
 | Realschule | Mathematik  | Bayern     | 9. Klasse    | Stegreifaufgabe | 01 | 30 Minuten |
+| Realschule | Deutsch     | Bayern     | 10. Klasse   | Schulaufgabe | 01 | 135 Minuten |
+| Realschule | Deutsch     | Bayern     | 10. Klasse   | Schulaufgabe | 02 | 135 Minuten |
 
 ---
 
