@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="190" viewBox="0 0 280 190" font-family="Arial, Helvetica, sans-serif" font-size="14">
+<rect x="0" y="0" width="280" height="190" fill="#ffffff"/>
+<path d="M35,155 L215,155 L215,20 Z" fill="#f4f8fc" stroke="#000" stroke-width="1.8"/>
+<path d="M35,155 L65,155 A30,30 0 0 0 59,137 Z" fill="#cfe3f7" stroke="#000" stroke-width="1"/>
+<text x="76.74" y="146.09" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle" font-style="italic">α</text>
+<path d="M215,143 L203,143 L203,155" fill="none" stroke="#000" stroke-width="1"/>
+<circle cx="210.76" cy="150.76" r="1.6" fill="#000"/>
+<text x="125" y="177" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle">Ankathete: 4</text>
+<text x="223" y="92.5" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="start">3</text>
+<text x="223" y="108.5" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="start" font-size="11">(Gegenk.)</text>
+<text x="120" y="75.5" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="end">Hypotenuse: 5</text>
+</svg>

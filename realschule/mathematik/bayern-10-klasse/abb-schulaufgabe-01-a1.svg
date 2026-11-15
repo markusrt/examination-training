@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="250" viewBox="0 0 380 250" font-family="Arial, Helvetica, sans-serif" font-size="14">
+<rect x="0" y="0" width="380" height="250" fill="#ffffff"/>
+<path d="M215,75 L241,75 A26,26 0 0 0 226.4,51.63 Z" fill="#cfe3f7" stroke="#000" stroke-width="1"/>
+<path d="M215,75 L224.64,55.23 A22,22 0 0 0 193,75 Z" fill="#fde2c4" stroke="#000" stroke-width="1"/>
+<path d="M215,75 L189,75 A26,26 0 0 0 203.6,98.37 Z" fill="#d8f0d2" stroke="#000" stroke-width="1"/>
+<path d="M161.35,185 L187.35,185 A26,26 0 0 0 172.75,161.63 Z" fill="#f6d3e4" stroke="#000" stroke-width="1"/>
+<line x1="20" y1="75" x2="355" y2="75" stroke="#000" stroke-width="1.6"/>
+<line x1="20" y1="185" x2="355" y2="185" stroke="#000" stroke-width="1.6"/>
+<line x1="137.24" y1="234.43" x2="236.92" y2="30.06" stroke="#000" stroke-width="1.6"/>
+<text x="362" y="80" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" font-style="italic">g</text>
+<text x="362" y="190" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" font-style="italic">h</text>
+<text x="244.92" y="36.06" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" font-style="italic">t</text>
+<text x="252.31" y="56.68" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle" >64°</text>
+<text x="195.92" y="49.47" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle" font-style="italic">β</text>
+<text x="181.08" y="101.2" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle" font-style="italic">α</text>
+<text x="195.27" y="168.8" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle" font-style="italic">γ</text>
+<circle cx="215" cy="75" r="2.5"/>
+<circle cx="161.35" cy="185" r="2.5"/>
+<text x="372" y="240" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke" font-size="11" font-style="italic" text-anchor="end">Die Abbildung ist nicht maßstabsgetreu.</text>
+</svg>
